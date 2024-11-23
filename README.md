@@ -34,6 +34,11 @@
       ```sh
       cd target
       ```
+    - You can also run the jar on release folder
+      ```sh
+      cd release
+      java -jar tasker-swingao.jar
+      ```
 
 2. **Run the JAR file**:
     - Use the following command to execute the JAR file:
@@ -54,3 +59,4 @@ Make sure to replace `tasker-swingao-1.0-SNAPSHOT-jar-with-dependencies.jar` wit
 ```sh
 cd target
 java -jar tasker-swingao-1.0-SNAPSHOT-jar-with-dependencies.jar
+
