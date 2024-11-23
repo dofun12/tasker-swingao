@@ -1,5 +1,5 @@
 # Tasker Swingao
-[!image](screenshots/tasker-swingao.png)
+![Alt text](screenshots/tasker-swingao.png "Main Screen ScreenShot")
 
 ## How to Clone and Run the Project
 
