@@ -26,7 +26,7 @@
       ```sh
       mvn clean package
       ```
-    - The executable JAR file will be generated in the `target` directory with the name `tasker-swingao-1.0-SNAPSHOT-jar-with-dependencies.jar`.
+    - The executable JAR file will be generated in the `target` directory with the name `tasker-swingao-0.0.2-jar-with-dependencies.jar`.
 
 ### How to Execute the JAR
 
@@ -44,10 +44,10 @@
 2. **Run the JAR file**:
     - Use the following command to execute the JAR file:
       ```sh
-      java -jar tasker-swingao-1.0-SNAPSHOT-jar-with-dependencies.jar
+      java -jar tasker-swingao-0.0.2-jar-with-dependencies.jar
       ```
 
-Make sure to replace `tasker-swingao-1.0-SNAPSHOT-jar-with-dependencies.jar` with the actual name of your JAR file if it differs.
+Make sure to replace `tasker-swingao-0.0.2-jar-with-dependencies.jar` with the actual name of your JAR file if it differs.
 
 ## Requirements
 
@@ -59,5 +59,5 @@ Make sure to replace `tasker-swingao-1.0-SNAPSHOT-jar-with-dependencies.jar` wit
 
 ```sh
 cd target
-java -jar tasker-swingao-1.0-SNAPSHOT-jar-with-dependencies.jar
+java -jar tasker-swingao-0.0.2-jar-with-dependencies.jar
 
