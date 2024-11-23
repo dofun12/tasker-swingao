@@ -1,4 +1,4 @@
-package org.lemanoman.youtubedlserver.service.interfaces;
+package org.lemanoman;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

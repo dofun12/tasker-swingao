@@ -1,15 +1,11 @@
-package org.lemanoman.youtubedlserver;
+package org.lemanoman;
 
-import org.lemanoman.youtubedlserver.dto.StatementParam;
-import org.lemanoman.youtubedlserver.service.interfaces.ResultSetConverter;
-import org.slf4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SqliteConnector {
-    Logger log = org.slf4j.LoggerFactory.getLogger(SqliteConnector.class);
     final String url;
 
     public SqliteConnector(String url) {
@@ -25,7 +21,7 @@ public class SqliteConnector {
         try (
                 Connection conn = getConnection();
                 var pstmt = conn.createStatement()) {
-            log.info("Executing: " + sql);
+            System.out.println("Executing: " + sql);
             pstmt.execute(sql);
         }
     }
@@ -51,7 +47,7 @@ public class SqliteConnector {
                 var pstmt = conn.prepareStatement(sql);
         ) {
             addParams(pstmt, params);
-            try (ResultSet rs = pstmt.executeQuery();) {
+            try (ResultSet rs = pstmt.executeQuery()) {
                 while (rs.next()) {
                     result.add(converter.convert(rs));
                 }
@@ -62,7 +58,7 @@ public class SqliteConnector {
 
     private void addParams(PreparedStatement pstmt, StatementParam[] params) throws SQLException {
         for (var param : params) {
-            log.info("Param: " + param.index() + " Value: " + param.value());
+            System.out.println("Param: " + param.index() + " Value: " + param.value());
             if (param.type().equals(String.class)) {
                 pstmt.setString(param.index(), (String) param.value());
             }
@@ -109,7 +105,7 @@ public class SqliteConnector {
         try (
                 Connection conn = getConnection();
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            log.info("Executing: " + sql);
+            System.out.println("Executing: " + sql);
 
             addParams(pstmt, params);
 
