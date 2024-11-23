@@ -1,34 +1,56 @@
 # Tasker Swingao
 
-## How to Execute the JAR
+## How to Clone and Run the Project
 
-To execute the JAR file located in the `release` folder, follow these steps:
+### Prerequisites
 
-1. **Ensure you have Java 21 installed**:
-   - You can download and install Java 21 from the [official Oracle website](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html) or use a package manager suitable for your operating system.
+- **Java 21**: Ensure you have Java 21 installed. You can download and install Java 21 from the [official Oracle website](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html) or use a package manager suitable for your operating system.
+- **Maven**: Ensure you have Maven installed. You can download and install Maven from the [official Maven website](https://maven.apache.org/download.cgi).
 
-2. **Navigate to the `release` folder**:
-   - Open a terminal or command prompt.
-   - Change the directory to the `release` folder where the JAR file is located. For example:
-     ```sh
-     cd path/to/release
-     ```
+### Steps to Clone and Build the Project
 
-3. **Run the JAR file**:
-   - Use the following command to execute the JAR file:
-     ```sh
-     java -jar tasker-swingao-1.0-SNAPSHOT-jar-with-dependencies.jar
-     ```
+1. **Clone the Repository**:
+    - Open a terminal or command prompt.
+    - Run the following command to clone the repository:
+      ```sh
+      git clone https://github.com/dofun12/tasker-swingao.git 
+      ```
+    - Navigate to the project directory:
+      ```sh
+      cd tasker-swingao
+      ```
+
+2. **Build the Project**:
+    - Run the following Maven command to build the project and generate the executable JAR:
+      ```sh
+      mvn clean package
+      ```
+    - The executable JAR file will be generated in the `target` directory with the name `tasker-swingao-1.0-SNAPSHOT-jar-with-dependencies.jar`.
+
+### How to Execute the JAR
+
+1. **Navigate to the `target` folder**:
+    - Change the directory to the `target` folder where the JAR file is located. For example:
+      ```sh
+      cd target
+      ```
+
+2. **Run the JAR file**:
+    - Use the following command to execute the JAR file:
+      ```sh
+      java -jar tasker-swingao-1.0-SNAPSHOT-jar-with-dependencies.jar
+      ```
 
 Make sure to replace `tasker-swingao-1.0-SNAPSHOT-jar-with-dependencies.jar` with the actual name of your JAR file if it differs.
 
 ## Requirements
 
 - Java 21
-- The JAR file located in the `release` folder
+- Maven
+- The JAR file located in the `target` folder
 
 ## Example
 
 ```sh
-cd release
-java -jar tasker-swingao.jar
+cd target
+java -jar tasker-swingao-1.0-SNAPSHOT-jar-with-dependencies.jar
